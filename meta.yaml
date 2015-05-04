@@ -1,0 +1,26 @@
+{%set build = 0 %}
+
+package:
+  name: twiggy
+  version: !!str 0.4.7
+
+about:
+  home: https://twiggy.wearpants.org
+  license: BSD License
+  summary: "Twiggy is a Pythonic logger."
+
+source:
+  fn: Twiggy-0.4.7.tar.gz
+  url: https://pypi.python.org/packages/source/T/Twiggy/Twiggy-0.4.7.tar.gz
+  md5: 4d363a8d6b966b7ec617a08bf129f2b9
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+build:
+  number: {{build}}
+  script: python setup.py install
